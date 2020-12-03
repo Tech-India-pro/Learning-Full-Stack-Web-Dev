@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>HTML forms</h2>
+    <form action="backend.php">
+        <label for="name">Name</label>
+            <div><input type="text" name="userName" id="name"></div>
+        <br>
+        <label for="role">Role:</label>
+            <div><input type="text" name="userRole" id="role"></div>
+        <br>
+        <label for="email">Email:</label>
+            <div><input type="email" name="userEmail" id="email"></div>
+        <br>
+        <label for="date">Date:</label>
+            <div><input type="date" name="userBirthDate" id="date"></div>
+        <br>
+        <label for="random">Any random number (1-100):</label>
+            <div><input type="number" name="userRandomNumber" max="100" min="1" id="random"></div>
+        <br>
+            <div>
+            <label for="beautiful">Beautiful:</label>
+                <input type="checkbox" name="userPersonality" id="beautiful"><br>
+            <label for="smart">Smart:</label>
+                <input type="checkbox" name="userPersonality" id="smart"><br>
+            <label for="fortunate">Fortunate</label>
+                <input type="checkbox" name="userPersonality" id="fortunate"><br>
+            </div>
+
+            <div>
+                <label for="male">Male</label>
+                    <input type="radio" name="userGender" id="male">
+                <label for="female">Female</label>
+                    <input type="radio" name="userGender" id="female">
+                <label for="other">Other</label>
+                    <input type="radio" name="userGender" id="other">
+            </div>
+        <br>
+        <label for="aboutMe">Tell us more about you:</label>
+            <div><textarea name="aboutUser" cols="90" rows="10" id="aboutMe"></textarea></div>
+        <br>
+            <div><input type="submit" value="Submit Now"></div>
+            <div><input type="reset" value="Clear"></div>
+    </form>
+</body>
+</html>
