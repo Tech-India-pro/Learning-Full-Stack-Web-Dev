@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /* Comments */
+        /* Element Selector */
+        p {color: red;}
+
+        /* ID selector */
+        #simpleParagraph{color: green;}
+
+        /* Class Selector */
+        .blueBackground {background-color: lightblue;}
+        .silverBorder {border: 2px solid silver;}
+
+        /*Grouping Selector*/
+        footer, span{color: goldenrod;}
+    </style>
+</head>
+<body>
+    <h3>CSS Selectors</h3>
+    <p class = "blueBackground">This is a simple paragraph to demonstrate CSS selectors</p>
+    <p id="simpleParagraph" class="silverBorder blueBackground">This is another simple paragraph to demonstrate CSS selectors</p>
+    <div>
+        <p>This is another simple paragraph inside a div to demonstrate CSS selectors</p>
+        <span>Wiki</span>
+    </div>
+    <footer>This is footer</footer>
+</body>
+</html>
