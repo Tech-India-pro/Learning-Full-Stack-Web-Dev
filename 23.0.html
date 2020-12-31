@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        /* #item1{ display: inline }
+        #item2{ display: inline } */
+
+        .container{
+            height: 344px;
+            width: 100%;
+            border: 2px solid black;
+        }
+
+        /* Properties for "flex container" */
+        .container {
+            /*--> Initialize the container as flex box */
+            display: flex;
+
+            /*--> Flex Directions: row(default), column, row-reverse, column-reversed */
+            flex-direction: column;
+            /* flex-direction: row-reverse; */
+
+            /*--> Flex box elements don't get wrapped automatically when the screen is resized */
+            /*--> Use flex-wrap to add wrap to Flex Box */
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+
+            /*--> Flex Flow is shorthand notation */
+            /* flex-flow: row wrap; */
+
+            /* Placing content horizontally  */
+            justify-content: center; /* Align all elements to be in the center */
+            justify-content: space-between; /* Align all the elements to have equal spacing b/w them but not with the walls of container */
+            justify-content: space-evenly; /* Align all the elements to have equal spacing b/w them and also with the walls of container */
+            justify-content: space-around; /* Align all the elements to have equal spacing along both of their sides */
+
+
+            /* Placing content vertically */
+            align-items: center; /* Aligns items to be centered vertically */
+            align-items: flex-end; /* Aligns items to the end of the container */
+            align-items: flex-start; /* Aligns items to the start of the container + default */
+            align-items: stretch; /* When the height of the items is less than that of the container and wrap is activated, then the items are arranged in a way having baseline and stretching the item down */
+        }
+        
+        .item {
+            background-color: tomato;
+            width: 250px;
+            height: 200px;
+            border: 2px solid green;
+            margin: 10px;
+            padding: 3px;
+        }
+
+        /* Properties for "flex item" */
+        #item1{
+            order: 2; /* Since the default is 1, this box will move to the end */
+
+            flex-grow: 3; /* Item will grow three times faster than usual */
+
+            flex-shrink: 3; /* Item will shrink three times faster than usual */ 
+        }
+        #item2{
+            flex-basis: 320px;
+            /* When flex-direction is set to row, flex-basis controls width and when flex-direction is set to column, flex-basis controls height */
+        }
+        #item3{
+            /* flex: flex-grow flex-shrink flex-basis */
+            flex: 8 8 500px;
+
+            /* Aligns the item according to the container */
+            align-self: center;
+            align-self: flex-start;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is FlexBox</h1>
+    <div class="container">
+        <div class="item" id="item1">First Box</div>
+        <div class="item" id="item2">Second Box</div>
+        <div class="item" id="item3">Third Box</div>
+        <!-- <div class="item" id="item4">Fourth Box</div>
+        <div class="item" id="item5">Fifth Box</div>
+        <div class="item" id="item6">Sixth Box</div> -->
+    </div>
+</body>
+</html>
