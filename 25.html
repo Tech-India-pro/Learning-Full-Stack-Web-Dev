@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries</title>
+    <style>
+        .box{
+            background-color: red;
+            color: white;
+
+            font-size: 42px;
+            text-align: center;
+            display: none;
+        }
+        @media only screen and (max-width: 1024px){
+            #box1{
+                display: block;
+                background-color: #ccc;
+            }
+        }
+        @media only screen and (min-width: 1025px) and (max-width: 1439px){
+            #box2{
+                display: block;
+                background-color: #aaa;
+            }
+        }
+        @media only screen and (min-width: 1440px) and (max-width: 2000px){
+            #box3{
+                display: block;
+                background-color: #888888;
+            }
+        }
+        @media only screen and (min-width: 2001px){
+            #box4{
+                display: block;
+                background-color: #666;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">iPhone</div>
+    <div class="box" id="box2">iPad</div>
+    <div class="box" id="box3">Computer</div>
+    <div class="box" id="box4">Wide Screen</div>
+</body>
+</html>
