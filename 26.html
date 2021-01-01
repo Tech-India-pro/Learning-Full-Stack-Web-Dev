@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <style>
+        h1{
+            background-color: red;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* All paragraphs inside all div-s */
+        div p{
+            color: brown;
+        }
+        
+        /* All paragraphs that are direct children of div */
+        div > p {
+            background-color: #aaaaaa;
+        }
+
+        /* All paragraphs which had <div> as siblings before them */
+        div + p {
+            background-color: rgb(0, 255, 0)
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors</h1>
+    <div class="container">
+        <div class="row">
+            <p>This is a yellow paragraph</p>
+        </div>
+        <p>This is another yellow paragraph with green background</p>
+        <ul>
+            <li class="item"><p>This is another yellow paragraph inside li &lt; ul &lt; div.container</p></li>
+            <li class="item">This is inside li &lt; ul &lt; div.container but does not have a &lt;p&gt; tag so it is not yellow</li>
+        </ul>
+        <p>This is another yellow paragraph with grey background</p>
+    </div>
+    <p>This is outermost paragraph outside &lt;div&gt; tags and so it is not yellow but has green background</p>
+    
+</body>
+</html>
