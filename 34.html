@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid 1</title>
+    <style>
+        .container{
+            display: grid;
+
+            /* Set columns of the width given */
+            grid-template-columns: 300px 100px 100px;
+
+            /* auto: tries to get all the space it can get and then divides it among itself */
+            /* grid-template-columns: 300px auto 100px;
+            grid-template-columns: 200px auto auto; */
+
+            /* Using and dividing the space given using fractions */
+            /* grid-template-columns: 10fr 4fr 2fr; */
+
+            /* repeat(no of times, width of column): repeats the given width by the no. of times given */
+            /* grid-template-columns: repeat(10, auto); */
+            
+            /* Adds gap b/w columns and grid items */
+            grid-gap: 2rem;
+
+
+        }
+        .item{
+            background-color: red;
+            border: 2px solid black;
+            /* margin: 3px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-3</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+        <div class="item">This is item-7</div>
+        <div class="item">This is item-8</div>
+        <div class="item">This is item-9</div>
+    </div>
+</body>
+</html>
