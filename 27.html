@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute, n-th child and pseudo selectors</title>
+    <style>
+      .container {
+        display: block;
+        width: 300px;
+        margin: auto;
+      }
+      input {
+        display: block;
+      }
+
+      /* input tag with type attribute = "_black" */
+      input[type="text"] {
+        padding: 20px;
+        border: 2px solid red;
+      }
+
+      /* <a> tag with target attribute defined */
+      a[target] {
+        color: grey;
+      }
+
+      /* Selects the n-th child element of the selected value */
+      li:nth-child(3) {
+        color: green;
+      }
+
+      /* This will apply on every second element */
+      li:nth-child(2n + 0) {
+        background-color: black;
+      }
+
+      /* odd-child */
+      li:nth-child(odd) {
+        color: blue;
+      }
+      /* even child */
+      li:nth-child(even) {
+        color: rgb(201, 201, 201);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><a href="http://www.google.com" target="_blank">Google.com</a></h1>
+
+      <form action="#" class="form-control">
+        <input type="text" placeholder="Enter your name" />
+        <input type="password" placeholder="Enter your password" />
+        <input type="submit" value="Submit" />
+      </form>
+
+      <ul>
+        <li class="item" id="item1">Item 1</li>
+        <li class="item" id="item2">Item 2</li>
+        <li class="item" id="item3">Item 3</li>
+        <li class="item" id="item4">Item 4</li>
+        <li class="item" id="item5">Item 5</li>
+        <li class="item" id="item6">Item 6</li>
+        <li class="item" id="item7">Item 7</li>
+        <li class="item" id="item8">Item 8</li>
+        <li class="item" id="item9">Item 9</li>
+        <li class="item" id="item10">Item 10</li>
+      </ul>
+    </div>
+  </body>
+</html>

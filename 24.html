@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        /* *em* */
+        .container{
+            /* font-size: 20px; */
+            border: 2px solid red;
+            width: 400px;
+            height: 300;
+        }
+        h1{ text-align: center; }
+        #first{
+            /* This will set the font size to be 10 times that of normal */
+            /* font-size: 5em; */
+            /* Padding = 20px * 5em * 3em = 300px */
+            /* padding: 3em; */
+        }
+
+        /* *rem* */
+        html{
+            /* font-size: 25px; */
+        }
+        #second{
+            /* rem: is relative only to the root "html"'s measurements */
+            /* font-size: 3rem; */
+            /* padding: 3rem; */
+        }
+
+        /* vh and vw */
+        .container{
+            /* Sets the height of the element to be equal to 100% of the height of the page */
+            height: 100vh;
+            /* Sets the width of the element to be equal to 100% of the width of the page */
+            width: 100vw;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+</html>

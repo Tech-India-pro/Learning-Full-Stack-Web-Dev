@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box and Text Shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            padding: 20px 10px;
+            border: 2px solid red;
+            margin: 20px 10px;
+            background-color: burlywood;
+
+            /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+            /* box-shadow: 10px 10px 2px grey; */
+            /* box-shadow: inset 2px 2px 10px grey; */
+            /* inset: sets the shadow to be inside the element */
+
+            /* Adding two Shadows together */
+            box-shadow: 2px 2px 5px green, 5px 5px 3px orange;
+        }
+
+        .card > h2 {
+            text-shadow: 0px 0px 3px white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card2">
+            <h2>Python</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus explicabo qui culpa laborum, impedit aliquid maxime quaerat, vero assumenda enim omnis rem molestias. Optio dolor fuga temporibus, voluptas quo neque?</p>
+        </div>
+        <div class="card" id="card1">
+            <h2>JavaScript</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus explicabo qui culpa laborum, impedit aliquid maxime quaerat, vero assumenda enim omnis rem molestias. Optio dolor fuga temporibus, voluptas quo neque?</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Java</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus explicabo qui culpa laborum, impedit aliquid maxime quaerat, vero assumenda enim omnis rem molestias. Optio dolor fuga temporibus, voluptas quo neque?</p>
+        </div>
+    </div>
+</body>
+</html>

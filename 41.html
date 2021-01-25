@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript | Strings and String Methods</title>
+  </head>
+  <body>
+    <div class="container">
+      <p id="heading">Lorem ipsum dolor sit.</p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus
+        praesentium debitis cupiditate vel voluptatem repudiandae illo
+        laudantium quod optio obcaecati ut voluptates ex cum iste, accusantium
+        veniam ducimus, numquam consequuntur consequatur non error nemo.
+      </p>
+    </div>
+    <script>
+      var name = "Adeesh";
+      // console.log(name);
+      var message = " is a good programmer!";
+      var age = 15;
+      var gender = "boy";
+      // console.log(name + message);
+
+      // Templates --> are used to allow the use of both single and double quotes and also allows strings to be attached with ease
+      var temp = `${name} is a nice ${gender} and he is just ${age} years old.`;
+      console.log(temp);
+
+      // .length --> function to count the number of letters in a string
+      var lenOfName = name.length;
+      console.log(lenOfName);
+
+    //   Escape Sequences
+    console.log("Hello World\nGood Morning\nor whatever suits at the current time!");
+    console.log("Hello World\b")
+
+    // Constructors
+    var str = new String("Good");
+    console.log(str);
+    
+    var age = 20;
+    if(age>18){
+        document.getElementById("heading").innerHTML = "<h3>Adeesh</h3>"
+    }
+    </script>
+  </body>
+</html>

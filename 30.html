@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables and Custom Properties</title>
+    <style>
+        :root {
+            /* Global Variable */
+            --road: grey;
+            --common-measurements: 300px;
+        }
+
+        .box{
+            width: var(--common-measurements);
+            height: var(--common-measurements);
+            border: 2px solid red;
+            margin: 2px 9px;
+            box-shadow: 3px 3px var(--box-color);
+
+            /* Local Variable */
+            --box-color: blue;
+            background-color: var(--box-color);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background-color: var(--road);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations and Key Frames</title>
+    <style>
+        body{margin-left: 0px;}
+        /* From-to Style Animation */
+        /* Setting up the animation */
+        @keyframes main {
+            from{
+                width: 0vw;
+            }
+            to{
+                width: 100vw;
+            }
+        }
+        .container{
+            margin: 0;
+            width: 100vw;
+            height: 25px;
+            border: 2px solid black;
+            background-color: greenyellow;
+        }
+
+        .box{
+            background-color: green;
+            position: relative;
+            width: 0px;
+            height: 25px;
+            animation-name: main;
+            animation-duration: 6s;
+            /* The number of times the animation must repeat */
+            animation-iteration-count: 3;
+            /* animation-iteration-count: 0; */
+            /* animation-iteration-count: infinite; */
+            
+            /* The animation-fill-mode helps us define the end state of the animation */
+            animation-fill-mode: forwards;
+
+            /* How animation should work */
+            animation-timing-function: ease-in; /* First slow then fast */
+            animation-timing-function: ease-out; /* First fast then slow */
+            animation-timing-function: ease-in-out; /* First slow then fast and then slow */
+
+            /* The time after the full load of webpage, the animation should start */
+            animation-delay: 2s;
+
+            /* The direction of action */
+            animation-direction: reverse; /* Reverses the actions of animation */
+        }
+
+
+
+        /* Percent Style Animation */
+        /* Setting up the animation */
+        .image-container{
+            margin-left: 0px;
+            margin-top: 50px;
+            /* background-color: rgb(139, 129, 129); */
+            /* border: 2px solid silver; */
+            width: 100vw;
+            height: 100vh;
+        }
+        @keyframes car {
+            0%{
+                left: 0vw;
+                top: 0vh;
+            }
+            25%{
+                left: 10vw;
+                top: 10vh;
+            }
+            50%{
+                left: 20vw;
+                top: 15vh;
+            }
+            75%{
+                left: 80vw;
+                top: 30vh;
+            }
+            100%{
+                left: 100vw;
+                top: 100vh;
+            }
+
+        }
+        .image-container img {
+            position: relative;
+            left: 0px;
+            animation-name: car;
+            animation-duration: 10s;
+            animation-iteration-count: 2;
+            
+            /* Short hand property of animation */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: car 5s ease-in-out 2s 1 normal forwards;
+
+        }
+    </style>
+</head>
+<body>
+    <p>Time in which 1/10 of this minute to end:</p>
+    <div class="container">
+        <div class="box">
+            <!-- Progress Bar -->
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="Resources/Images/Car.svg" alt="Car">
+    </div>
+</body>
+</html>

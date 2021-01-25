@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .box {
+        /* background-color: brown; */
+        /* border: 2px solid black; */
+        border-radius: 8px;
+        height: 200px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all 1s ease;
+      }
+      div.box{
+          background-color: red;
+      }
+      .container {
+        background-color: burlywood;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Transform Properties */
+      .box:hover{
+          /* transform: rotate(360deg); */
+
+          /* Changes the angle of the base */
+          /* transform: skew(-40deg); */
+
+          /* Change the sides */
+          /* transform: scale(2); */
+
+        /* Moves the obj */
+          /* transform: translateX(20px); */
+          /* transform: translateY(130px); */
+        transform: translate(20px, 20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="/Resources/Images/Windmill.svg" alt="" class="box">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

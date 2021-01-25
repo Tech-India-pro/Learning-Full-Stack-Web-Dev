@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex-Box from Traversy Media</title>
+    <style>
+        /* 
+        Flex Properties:
+            display: flex | inline-flex;
+            flex-direction: row | column;
+            flex-wrap: wrap | no-wrap | wrap-reverse;
+            flex-basis: <length>;
+            justify-content: flex-start | flex-end | center;
+            align-self: flex-start | flex-end | center;
+            align-items: flex-start | flex-end | center;
+            align-content: flex-start | flex-end | center;
+            flex-grow: <number>;
+            flex-shrink: <number>;
+            flex: <integers>;
+            order: <integer>;
+         */
+
+
+        .container-1{
+            display: flex;
+            align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            align-items: stretch; /* Default */
+
+            flex-direction: column;
+            flex-direction: row;
+        }
+
+        .container-1 div{
+            border: 1px #ccc solid;
+            padding: 10px;
+        }
+
+        .box-1 {
+            flex: 2;
+            order: 2;
+        }
+        .box-2 {
+            flex: 1;
+            order: 1;
+            
+        }
+        .box-3 {
+            flex: 1;
+            order: 3;
+        }
+
+        /* ******************************************************************* */
+        /* ******************************************************************* */
+
+        .container-2 {
+            display: flex;
+            justify-content: space-between;
+        }
+        .box{
+            /* width: 20%; */
+            flex-basis: 20%;
+            border: 1px solid #ccc;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <div class="box-1">
+            <h3>Box-1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, facere.</p>
+        </div>
+        <div class="box-2">
+            <h3>Box-2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, facere.</p>
+        </div>
+        <div class="box-3">
+            <h3>Box-3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, facere.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="box">
+            <h3>Box-4</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, facere.</p>
+        </div>
+        <div class="box">
+            <h3>Box-5</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, facere.</p>
+        </div>
+        <div class="box">
+            <h3>Box-6</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, facere.</p>
+        </div>
+    </div>
+</body>
+</html>

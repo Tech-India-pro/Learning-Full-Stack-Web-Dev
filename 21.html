@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        .container {
+            position: relative;
+            top: 400px;
+            background-color: #eeeeee;
+        }
+        /* Types of positions: static (default), absolute, relative, fixed, sticky*/
+        .box {
+            display: inline-block;
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+        #box3 {
+            position: relative;
+            /* Relative: relative to its normal position */
+            /* Use top, bottom, right and left to adjust position */
+            top: 62px;
+            left: 30px;
+        }
+
+        #box2 {
+            position: absolute;
+            /* Absolute: relative to the parent container */
+            /* Use top, bottom, right and left to adjust position */
+            top: 300px;
+            left: 230px;
+        }
+
+        #box4 {
+            /* fixed: Element remains at its normal position even after scrolling */
+            position: fixed;
+            right: 150px;
+        }
+        #box5 {
+            position: sticky;
+            top: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+        <div class="box" id="box5">5</div>
+    </div>
+</body>
+</html>
