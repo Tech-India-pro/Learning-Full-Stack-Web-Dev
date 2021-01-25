@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript String Functions</title>
+    <style></style>
+  </head>
+  <body>
+    <script>
+      var str = "This is a string";
+      console.log(str); //$~This is a string
+
+      // Position of a letter or word {sub-string} (First Occurence)
+      var position = str.indexOf("is");
+      console.log(position); //$~2
+      // Position of a letter or word {sub-string} (Last Occurence)
+      position = str.lastIndexOf("is");
+      console.log(position); //$~5
+
+      //Substring of a string
+      var substr = str.slice(1, 6);
+      // string.slice(first letter number, last letter number); :<->: Prints the 1 to (n-1)th letter --> Skips the last n-th letter
+      // Can take negative values also!
+      console.log(substr); //$~his i
+
+      // string.substring(first letter number, last letter number); :<->: Prints the 1to (n-1)th letter --> Skips the last n-th letter
+      // Cannot take negative values
+      substr = str.substring(1, 6);
+      console.log(substr); //$~his i
+
+      //string.substr(starting point, number of letters) :<->: first n-th letters from the starting point
+      substr = str.substr(1, 9);
+      console.log(substr); //$~his is a
+
+      //Replacing substrings
+      var replaced = str.replace("string", "boy");
+      console.log(replaced); //$~This is a boy
+
+      console.log(str.toUpperCase()); //$~THIS IS A STRING
+      console.log(str.toLowerCase()); //$~this is a string
+
+      //Appending the string: Adding new substring to the end of a string
+      var newString = str.concat(" in JavaScript");
+      console.log(newString); //$~This is a string in JavaScript
+
+      //Appending the string: Removing spaces from around the string
+      var strWithSpaces = "   Hello   World  ";
+      console.log(strWithSpaces); //$~   Hello   World
+      console.log(strWithSpaces.trim()); //$~Hello   World
+
+      //charAt(): Returns the character at the specified place
+      var char3 = str.charAt(2);
+      console.log(char3); //$~i
+
+      //charCodeAt(): Returns the UTF-8 Code of the letter
+      var char3Code = str.charCodeAt(2);
+      console.log(char3Code); //$~105
+
+      //Getting the letter at a specific place from a string
+      console.log(str[2]); //$~i
+    </script>
+  </body>
+</html>
