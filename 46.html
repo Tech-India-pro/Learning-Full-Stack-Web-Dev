@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert(), Prompt() and Confirm()</title>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="message">Message</div>
+</body>
+<script>
+    //Alert: Does not return anything
+        alert("This is a message");
+
+    //Prompt(): Allows input
+    let name = prompt("Enter your name", "Guest");
+    console.log(name);
+
+    //Confirm()
+    let toBeDeleted = true;
+    if (toBeDeleted == true){
+        let deleteConfirmation = confirm("Do you want to delete the message")
+        if (deleteConfirmation == true){
+            document.getElementById("message").innerText="deleted";
+            document.getElementById("message").style.display="none";
+        }
+        else{
+            document.getElementById("message").style.display="block";
+        }
+    }
+</script>
+</html>
