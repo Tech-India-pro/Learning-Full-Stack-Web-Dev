@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope, If-Else and Switch Case</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>Item-1</li>
+            <li>Item-2</li>
+            <li>Item-3</li>
+            <li>Item-4</li>
+            <li>Item-5</li>
+            <li>Item-6</li>
+            <li>Item-7</li>
+        </ul>
+    </div>
+    <script>
+            var string1 = "This is a string";
+            console.log(string1); //$~This is a string
+
+        //Updating Strings
+            string = "This is a person";
+            console.log(string1); //$~This is a person
+
+        // Global Scope Variable
+            var something = "<html>";
+        
+        // Block Scope Variable
+            {
+                //somethingElse is defined inside this block
+                // It can be used here
+                let somethingElse = "<head>";
+                console.log(somethingElse) //$~ <head>
+            }
+            // the variable soemthingElse cannot be used here
+            console.log(something); //$~<html>
+            // console.log(somethingElse) //$~ Gives an error
+
+        // Const
+            const name = "Adeesh";
+            console.log(name);
+            // name = "Ashvika";
+            // console.log(name); //$~Error
+
+        // If-Else
+            let age = 21;
+            if(age>18){
+                console.log("Can Marry!");
+            }
+            else if(age==18){
+                console.log("May Marry");
+            }
+            else{
+                console.log("Cannot Marry");
+            }
+
+        //Switch Case
+            const day = "Wednesday";
+            const firstLetter = day[0] + day[1];
+            switch(firstLetter){
+                case "Mo":
+                    console.log("Monday");
+                    break;
+                case "Tu":
+                    console.log("Tuesday");
+                    break;
+                case "We":
+                    console.log("Wednesday");
+                    break;
+                case "Th":
+                    console.log("Thursday");
+                    break;
+                case "Fr":
+                    console.log("Friday");
+                    break;
+                case "Sa":
+                    console.log("Saturnday");
+                    break;
+                case "Su":
+                    console.log("Sunday");
+                    break;
+                default:
+                    console.log("Not a day");
+                    break;
+            }
+    </script>
+</body>
+</html>
