@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects in JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        Simple HTML
+    </div>
+    <script>
+            let myVar1 = 35;
+            let myVar2 = "Something";
+            let myVar3 = true;
+            let myVar4 = null;
+            let myVar5 = undefined;
+
+            //Making object arrays
+                let employee = {
+                    name: "Tim",
+                    age: 20,
+                    salary: 200000,
+                    youTubeChannel: "Tech With Tim"
+                }
+                console.log(employee); //$~{name: "Tim", age: 20, salary: 200000, youTubeChannel: "Tech With Tim"}
+                console.log(employee.age) //$~20
+                console.log(employee[name]) //$~Tim
+            //Arrays
+                let names = ["Ashvika", "Maahi", "Rishabh", "Kanishka"];
+                console.log(names); //$~(4) ["Ashvika", "Maahi", "Rishabh", "Kanishka"]
+                console.log(names[0]); //$~Ashvika
+
+            //Arrays can also be created as new objects using the 'new' keyword 
+                let numbers = new Array(2, 3, 1, 5, 4);
+
+            // .length
+                console.log(numbers.length); //$~5
+
+            // .sort()
+                numbers = numbers.sort();
+                console.log(numbers); //$~[1, 2, 3, 4, 5]
+            
+            //.push() : Adds a new element at the end
+                numbers.push(17);
+                console.log(numbers);
+
+            //Making arrays with multiple objects
+                let numbers2 = new Array(23);
+                console.log(numbers2); //$~[empty x 23]
+
+    </script>
+</body>
+</html>
